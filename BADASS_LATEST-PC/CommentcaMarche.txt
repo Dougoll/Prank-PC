@@ -4,14 +4,12 @@ YAMETE KUDASAI PRANK
   pour retirer la clé avant que le son soit réactivé.
 
 ######POUR ACTIVER yamete-kudasai#######################################################
-1. Double-clique sur fun.bat, une fenêtre va s'ouvrir								   #
-2. Double-clique sur _INSTALL.bat													   #
-3. Retire la clé quand tu vois le message pour retirer la clé et que le son est muté   #
+1. Double-clique sur fun.bat, une fenêtre va s'ouvrir								                   #
+2. Double-clique sur _INSTALL.bat													                             #
 ########################################################################################
 
 
 ######POUR DÉSACTIVER yamete-kudasai####################################################
-1. Double-clique sur fun.bat, une fenêtre va s'ouvrir								   #
-2. Double-clique sur _UNINSTALL.BAT													   #
-3. Retire la clé USB quand tu vois le message pour retirer la clé					   #
+1. Double-clique sur fun.bat, une fenêtre va s'ouvrir								                   #
+2. Double-clique sur _UNINSTALL.BAT													                           #
 ########################################################################################
