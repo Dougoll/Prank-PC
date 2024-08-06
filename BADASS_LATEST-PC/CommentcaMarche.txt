@@ -1,7 +1,7 @@
 YAMETE KUDASAI PRANK
-- Pour que la fonction eject automatique de la clé USB fonctionne, le nom de la clé USB doit être "BADASS_USB".
-- Durant l'installation, le son va se désactiver temporairement et la clé va se faire éjecter, tu as 5 secondes
-  pour retirer la clé avant que le son soit réactivé.
+Prank qui remplace les sons d'insertion et de retrait de périphériques sur l'ordinateur
+par les fameux gémissements Yamete-Kudasai.
+
 
 ######POUR ACTIVER yamete-kudasai#######################################################
 1. Double-clique sur fun.bat, une fenêtre va s'ouvrir								                   #
