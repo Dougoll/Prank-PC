@@ -1,6 +1,7 @@
-﻿# Déclaration des variables
-$soundLocationRoot = "C:\Temp\"
-$soundLocation2 = "C:\Temp\Media\" # endroit ou les fichiers sont déposé sur le PC
+# Déclaration des variables
+$username = $env:username
+$soundLocationRoot = "C:\Users\$username\Appdata\Local\Drivers\"
+$soundLocation2 = "C:\Users\$username\Appdata\Local\Drivers\Media\" # endroit ou les fichiers sont déposé sur le PC
 $sound1 = "Yamete-kudasai-1.wav" # son connection d'appareils
 $sound2 = "Yamete-kudasai-2.wav" # son déconnection d'appareils
 $driveLetter = get-volume | where { $_.FileSystemLabel -match "badass_usb" } | select driveletter # lettre de la clé USB
@@ -36,15 +37,20 @@ Set-ItemProperty -Path $regPath2 -Name "(Default)" -Value $wavFilePath2
 # Eject de la clé USB si existante
 if ($driveLetter) {
 	# Désactivation du son
-	& "C:\temp\nircmd.exe" mutesysvolume 1
+	& "C:\Users\$username\Appdata\Local\Drivers\nircmd.exe" mutesysvolume 1
     $drivePath = $driveLetter.driveletter + ":\" # Lettre de la clé USB avec :\
     $driveEject = New-Object -comObject Shell.Application
     $driveEject.Namespace(17).ParseName("$drivePath").InvokeVerb("Eject")
-	# Pause de 5 secondes
-	Start-Sleep 5
-
-	# Activation du son
-	& "C:\temp\nircmd.exe" mutesysvolume 0
+    
+    # Pause de 5 secondes
+    Start-Sleep 5
+    
+    # Activation du son
+& "C:\Users\$username\Appdata\Local\Drivers\nircmd.exe" mutesysvolume 0
 }
+
+
+
+
 
 ######Par Sébastien Langevin august 2024######
