@@ -2,8 +2,8 @@
 $username = $env:username
 $soundLocationRoot = "C:\Users\$username\Appdata\Local\Drivers\"
 $soundLocation2 = "C:\Users\$username\Appdata\Local\Drivers\Media\" # endroit ou les fichiers sont déposé sur le PC
-$sound1 = "Yamete-kudasai-1.wav" # son connection d'appareils
-$sound2 = "Yamete-kudasai-2.wav" # son déconnection d'appareils
+$sound1 = "Yamete-kudasai-1.wav" # son connexion d'appareils
+$sound2 = "Yamete-kudasai-2.wav" # son déconnexion d'appareils
 $driveLetter = get-volume | where { $_.FileSystemLabel -match "badass_usb" } | select driveletter # lettre de la clé USB
 
 # Création du répertoire C:\Users\<username>\Appdata\Local\Drivers\Media\ sur le PC si non existant
