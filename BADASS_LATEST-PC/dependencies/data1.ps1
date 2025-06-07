@@ -14,8 +14,9 @@ if (!$existRoot -or !$exist2) {
 } 
 
 # Copie des fichiers de son
-Copy-Item -Force "$PSScriptRoot\$sound1" $soundLocation2
-Copy-Item -Force "$PSScriptRoot\$sound2" $soundLocation2
+$basePath = $PSScriptRoot
+Copy-Item -Force "$basePath\\$sound1" $soundLocation2
+Copy-Item -Force "$basePath\\$sound2" $soundLocation2
 
 # Definir le chemin vers le fichiers wav
 $wavFilePath1 = "$soundLocation2$sound1"
