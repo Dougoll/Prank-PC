@@ -35,7 +35,7 @@ Function get-integrity {
         }
     }
     if ($failedPaths.count -gt 0){
-        $failedPathsString = $failedPAths -join "`n"
+        $failedPathsString = $failedPaths -join "`n"
 
         $wshell = New-Object -ComObject Wscript.Shell
         $wshell.Popup("Il manque des fichiers!:`n`n$failedPathsString", 0, "Fichiers Manquants!!", 0x0)
