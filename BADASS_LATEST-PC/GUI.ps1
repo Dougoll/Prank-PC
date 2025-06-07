@@ -59,7 +59,7 @@ function Run-Batch {
             Write-Log "$file finished successfully."    
         } else {
             $err = Get-Content temp_err.txt
-            Write-Log "Error running $file: Exit $($process.ExitCode)"
+            Write-Log "Error running ${file}: Exit $($process.ExitCode)"
             if ($err) { Write-Log $err }
         }
     } catch {
